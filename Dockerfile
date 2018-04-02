@@ -5,3 +5,5 @@ ENV PYTHONUNBUFFERED 1
 WORKDIR /usr/src/app
 
 RUN pip install --no-cache-dir pipenv==11.9.0
+
+CMD ["python"]

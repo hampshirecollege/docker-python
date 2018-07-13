@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y \
         apache2 \
         apache2-dev \
         python3-dev \
+        libapache2-mod-shib2 \
         libapache2-mod-wsgi-py3 \
     && rm -rf /var/lib/apt/lists/*
 

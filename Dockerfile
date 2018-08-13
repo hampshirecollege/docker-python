@@ -12,6 +12,6 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /usr/src/app
 
-RUN pip install --no-cache-dir pipenv==11.9.0
+RUN pip install --no-cache-dir pipenv
 
 CMD ["python"]

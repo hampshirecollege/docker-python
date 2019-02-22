@@ -5,6 +5,8 @@ ENV PYTHONUNBUFFERED 1
 RUN apt-get update && apt-get install -y \
         apache2 \
         apache2-dev \
+        curl \
+        gnupg \
         libapache2-mod-shib2 \
         libapache2-mod-wsgi-py3 \
         libc-dev-bin \
@@ -12,8 +14,9 @@ RUN apt-get update && apt-get install -y \
         libc6-dev-i386 \
         libc6-i386 \
         linux-libc-dev \
-        python3-dev \
-    && rm -rf /var/lib/apt/lists/*
+        python3-dev
+RUN curl -sL https://deb.nodesource.com/setup_11.x  | bash -
+RUN apt-get -y install nodejs && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /usr/src/app
 

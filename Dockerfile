@@ -18,6 +18,8 @@ RUN apt-get update && apt-get install -y \
 RUN curl -sL https://deb.nodesource.com/setup_11.x  | bash -
 RUN apt-get -y install nodejs && rm -rf /var/lib/apt/lists/*
 
+COPY watchman /usr/local/bin/watchman
+
 WORKDIR /usr/src/app
 
 RUN pip install --no-cache-dir pipenv
